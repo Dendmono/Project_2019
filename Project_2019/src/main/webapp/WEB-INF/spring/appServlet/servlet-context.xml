@@ -10,6 +10,27 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	<beans:bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	<beans:property name="jndiName" value="java:comp/env/jdbc/myoracle"/>
+	</beans:bean>	
+	
+	<!-- SqlSessionFactory 객체 -->
+	<beans:bean id="sessionFactory" 
+		class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource"/>
+		<beans:property name="configLocation"
+	value="classpath:com/dend/project/mybatis/Configuration.xml"/>
+	</beans:bean>
+	
+	<!-- 
+		SqlSession 인터페이스를 구현한 
+		SqlSessionTemplate(SqlSession) 객체 
+		Dao 가 의존하는 객체 
+	-->
+	<beans:bean class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg name="sqlSessionFactory" 
+			ref="sessionFactory"/>
+		</beans:bean>	
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
@@ -23,8 +44,21 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+		<!-- 어노테이션으로 aop 적용하기 위한 설정 -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>	
+	
+
 	<context:component-scan base-package="com.dend.project" />
 	
+	<!-- 
+		bean 의 이름으로 view 를 찾아갈수 있도록 설정 
+		order  0 는 0순위로 찾아 가겠다라는 의미 
+		0 순위에서 찾아서 없으면
+		views 폴더 안에서 jsp 페이지를 찾게 된다. 
+	-->
+	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<beans:property name="order" value="0"/>
+	</beans:bean>
 	
 	
 </beans:beans>
