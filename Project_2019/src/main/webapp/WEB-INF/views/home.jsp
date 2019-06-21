@@ -6,7 +6,7 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>Blockbuster</title>
+  <title>blockbuster</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -71,8 +71,14 @@
             </ul>
           </li>
        -->
-          
+<c:choose>
+	<c:when test="${empty id }">          
           <li><a href="${pageContext.request.contextPath }/signupform.do">로그인</a></li>
+	</c:when>
+	<c:otherwise>    
+		  <li><a href="private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
+	</c:otherwise>
+</c:choose>                
         </ul>
       </nav><!-- .main-nav -->
       
@@ -92,8 +98,17 @@
       <div class="intro-info">
         <h2>전월세 보증금<br><span>blockbuster</span><br>블록버스터로 간편하고 빠르게 돌려받으세요</h2>
         <div>
+<c:choose>
+	<c:when test="${empty id }">        
           <a href="${pageContext.request.contextPath }/signupform.do" class="btn-get-started scrollto"> 쉬운 가입 </a>
-          <a href="#services" class="btn-services scrollto"> 로그인 </a>
+          <a href="${pageContext.request.contextPath }/loginform.do" class="btn-services scrollto"> 로그인 </a>
+	</c:when>
+	<c:otherwise>
+		 <h2> 환영합니다 ${id }님!</h2>
+		 <a href="private/list.do" class="btn-services scrollto"> 접속하기 </a>	          
+	</c:otherwise>
+</c:choose>  	
+	        
         </div>
       </div>
 
@@ -268,9 +283,7 @@
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>고객 센터</h4>
             <p>제품/서비스: 1588-3366
-            <br />구매문의: 1588-6084
-
-  
+            <br />구매문의: 1588-6084  
 
 </p>
           </div>
@@ -281,10 +294,9 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Blockbuster</strong>. All Rights Reserved
+        &copy; Copyright <strong>blockbuster</strong>. All Rights Reserved
       </div>
       <div class="credits">
-
            블록버스터는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다.
         <br /> 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다.
       </div>

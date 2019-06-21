@@ -50,18 +50,18 @@
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+                            <form action="signup.do" method="post" id="signupForm" novalidate>
                                 <div class="form-group">
-                                    <label>아이디 입력</label>
-                                    <input class="au-input au-input--full" type="text" name="username" placeholder="아이디를 입력해주세요">
+                                    <label for="id">아이디 입력</label>
+                                    <input class="au-input au-input--full" type="text" id="id" name="id" placeholder="아이디를 입력해주세요">
                                 </div>
                                 <div class="form-group">
-                                    <label>이메일 주소</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="이메일주소를 입력해주세요">
+                                    <label for="email">이메일 주소</label>
+                                    <input class="au-input au-input--full" type="email" id="email" name="email" placeholder="이메일주소를 입력해주세요">
                                 </div>
                                 <div class="form-group">
-                                    <label>비밀번호</label>
-                                    <input class="au-input au-input--full" type="password" name="password" placeholder="비밀번호를 입력해주세요">
+                                    <label for="pwd">비밀번호</label>
+                                    <input class="au-input au-input--full" type="password" id="pwd" name="pwd" placeholder="비밀번호를 입력해주세요">
                                 </div>
                                 <div class="login-checkbox">
                                     <label>
@@ -73,7 +73,7 @@
                             <div class="register-link">
                                 <p>
                                     이미 계정이 있으세요?
-                                    <a href="#">로그인</a>
+                                    <a href="${pageContext.request.contextPath }/loginform.do">로그인</a>
                                 </p>
                             </div>
                         </div>

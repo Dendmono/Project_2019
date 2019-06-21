@@ -11,7 +11,7 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	<beans:bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
-	<beans:property name="jndiName" value="java:comp/env/jdbc/myoracle"/>
+		<beans:property name="jndiName" value="java:comp/env/jdbc/myoracle"/>
 	</beans:bean>	
 	
 	<!-- SqlSessionFactory 객체 -->
@@ -30,7 +30,7 @@
 	<beans:bean class="org.mybatis.spring.SqlSessionTemplate">
 		<beans:constructor-arg name="sqlSessionFactory" 
 			ref="sessionFactory"/>
-		</beans:bean>	
+	</beans:bean>	
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
@@ -44,11 +44,13 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-		<!-- 어노테이션으로 aop 적용하기 위한 설정 -->
+	<!-- 어노테이션으로 aop 적용하기 위한 설정 -->
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>	
 	
 
 	<context:component-scan base-package="com.dend.project" />
+	<context:component-scan 
+		base-package="com.dend.project.users.*" />	
 	
 	<!-- 
 		bean 의 이름으로 view 를 찾아갈수 있도록 설정 

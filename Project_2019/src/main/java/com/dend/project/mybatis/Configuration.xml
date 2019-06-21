@@ -4,7 +4,15 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	
+	<typeAliases>
+		<typeAlias type="com.dend.project.users.dto.UsersDto"
+			alias="usersDto"/>			
+	</typeAliases>	
 
+	<!-- SQL 문을 정의하고 있는 XML 문서 정보 -->
+	<mappers>
+		<mapper resource="com/dend/project/mybatis/UsersMapper.xml"/>
+	</mappers>
 
 </configuration>
 
