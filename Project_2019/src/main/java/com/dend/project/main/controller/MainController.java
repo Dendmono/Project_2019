@@ -10,9 +10,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
 	
 	@RequestMapping("/private/main.do")
-	public String home(HttpServletRequest request){	
+	public String main(HttpServletRequest request){	
 
 		return "private/main";
+	}
+	
+	@RequestMapping("/private/info.do")
+	public String info(HttpServletRequest request){	
+
+		return "private/info";
 	}
 	
 }

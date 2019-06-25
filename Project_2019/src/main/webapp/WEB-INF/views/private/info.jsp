@@ -12,7 +12,7 @@
   </style>
 <head>
   <meta charset="utf-8">
-  <title>blockbuster main</title>
+  <title>blockbuster info</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -37,8 +37,20 @@
   <!-- Main Stylesheet File -->
   <link href="${pageContext.request.contextPath }/resources/css/style.css" rel="stylesheet">
   
+  <!--  -->
+  
+  
+  <!-- Vendor CSS-->
+  <link href="${pageContext.request.contextPath }/resources/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/wow/animate.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/slick/slick.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
 
- 
+  <!-- Main CSS-->
+  <link href="${pageContext.request.contextPath }/resources/css/theme.css" rel="stylesheet" media="all">
 
 </head>
 
@@ -98,16 +110,53 @@
     </div>
   </header><!-- #header -->
   
-<br /><br /><br /><br /> <br /><br />
+<br />
 	
-<div class="container">
-
-<h1> ICO OPEN 기념 토큰 배분 이벤트 </h1>
-<h2> 1 ETH = 30,000 BLB 교환</h2>
 
 
+<!-- MAIN CONTENT-->
+<div class="main-content">
+    <div class="section__content section__content--p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="au-card m-b-30">
+                        <div class="au-card-inner">
+                            <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
+                           		<div class="account2">
+        							<div class="image img-cir img-120">
+           								<img src="${pageContext.request.contextPath }/resources/images/icon/avatar-big-01.jpg" alt="John Doe" />
+       								</div>
+        						<h4 class="name">${id } </h4>
+        						<br /><br />
+       							<a href="#">개인정보 수정</a>
+       							<a href="#">비밀번호 수정</a>
+       							<a href="#">로그아웃</a>
+       							<br /><br /><br />
+       							<a href="#"><p>회원탈퇴</p></a>			
+   								</div>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="au-card m-b-30">
+                        <div class="au-card-inner">
+                            <h3 class="title-2 m-b-40">${id }님의 BLB토큰</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="au-card m-b-30">
+                        <div class="au-card-inner">
+                            <h3 class="title-2 m-b-40">${id }님의 보증금 내역</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
+<!-- END MAIN CONTENT-->
   
   
   
@@ -124,12 +173,10 @@
     Footer
   ============================-->
   <footer id="footer">
-      <div class="copyright">
-        &copy; Copyright <strong>blockbuster</strong>. All Rights Reserved
-      </div>
       <div class="credits">
-           블록버스터는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다.
-        <br /> 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다.
+        <br /> 블록버스터는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다.
+        <br /> 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다. <br />
+        &copy; Copyright <strong>blockbuster</strong>. All Rights Reserved
       </div>
   </footer><!-- #footer -->
 
@@ -153,6 +200,27 @@
   <script src="${pageContext.request.contextPath }/resources/contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
+  <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
+  
+  <!--  -->
+  
+  <!-- Vendor JS       -->
+  <script src="${pageContext.request.contextPath }/resources/vendor/slick/slick.min.js">
+  </script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/wow/wow.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/animsition/animsition.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+  </script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/counter-up/jquery.waypoints.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/counter-up/jquery.counterup.min.js">
+  </script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/circle-progress/circle-progress.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/chartjs/Chart.bundle.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/select2/select2.min.js">
+  </script>
+
+  <!-- Main JS-->
   <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
   
 
