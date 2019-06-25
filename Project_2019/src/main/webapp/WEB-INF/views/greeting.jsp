@@ -89,9 +89,14 @@
     <script src="${pageContext.request.contextPath }/resources/vendor/chartjs/Chart.bundle.min.js"></script>
     <script src="${pageContext.request.contextPath }/resources/vendor/select2/select2.min.js">
     </script>
-
     <!-- Main JS-->
     <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
+    
+    <script>    
+    
+    setTimeout("location.href='${pageContext.request.contextPath }/loginform.do'",3000);    
+  
+    </script>
 
 </body>
 </html>

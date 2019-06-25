@@ -30,6 +30,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="${pageContext.request.contextPath }/resources/css/style.css" rel="stylesheet">
+ 
 
 </head>
 
@@ -42,7 +43,7 @@
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <h1 class="text-light"><a href="#header"><span>Blockbuster</span></a></h1> -->
-        <a href="#intro" class="scrollto"><img src="${pageContext.request.contextPath }/resources/img/logo.png" alt="" class="img-fluid"></a>
+        <a href="${pageContext.request.contextPath }/" class="scrollto"><img src="${pageContext.request.contextPath }/resources/img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
@@ -73,9 +74,13 @@
        -->
 <c:choose>
 	<c:when test="${empty id }">          
-          <li><a href="${pageContext.request.contextPath }/signupform.do">로그인</a></li>
+          <li><a href="${pageContext.request.contextPath }/loginform.do">로그인</a></li>
 	</c:when>
-	<c:otherwise>    
+	<c:otherwise>
+	      <li><a href="private/info.do" class="btn-btn default">전 월세 매물</a></li>
+		  <li><a href="private/info.do" class="btn-services scrollto">내 보증금</a></li>
+		  <li><a href="private/info.do" class="btn-services scrollto">토큰 관리</a></li>
+		  <li><a href="private/info.do" class="btn-services scrollto">고객센터</a></li>
 		  <li><a href="private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
 	</c:otherwise>
 </c:choose>                
@@ -96,7 +101,7 @@
       </div>
 
       <div class="intro-info">
-        <h2>전월세 보증금<br><span>blockbuster</span><br>블록버스터로 간편하고 빠르게 돌려받으세요</h2>
+        <h2>전 월세 보증금<br><span>blockbuster</span><br>블록버스터로 간편하고 빠르게 돌려받으세요</h2>
         <div>
 <c:choose>
 	<c:when test="${empty id }">        
@@ -105,7 +110,7 @@
 	</c:when>
 	<c:otherwise>
 		 <h2> 환영합니다 ${id }님!</h2>
-		 <a href="private/list.do" class="btn-services scrollto"> 접속하기 </a>	          
+		 <a href="private/main.do" class="btn-services scrollto"> 접속하기 </a>	          
 	</c:otherwise>
 </c:choose>  	
 	        
