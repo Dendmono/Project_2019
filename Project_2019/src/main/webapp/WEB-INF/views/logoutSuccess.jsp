@@ -13,7 +13,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>blockbuster 로그인</title>
+    <title>blockbuster 로그아웃 리다이렉트</title>
 
     <!-- Fontfaces CSS-->
     <link href="${pageContext.request.contextPath }/resources/css/font-face.css" rel="stylesheet" media="all">
@@ -47,36 +47,17 @@
                         <div class="login-logo">
                             <a href="${pageContext.request.contextPath }/">
                                 <img src="${pageContext.request.contextPath }/resources/img/logo.png" alt="blockbuster">
-                            	<h3>블록버스터 로그인</h3>
                             </a>
                         </div>
                         <div class="login-form">
-                            <form action="login.do" method="post">
-                                <div class="form-group">
-                                	<input type="hidden" name="url" value="${url }" />
-                                    <label for="id">아이디</label>
-                                    <input class="au-input au-input--full" type="text" id="id" name="id" placeholder="아이디를 입력하세요">
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">비밀번호</label>
-                                    <input class="au-input au-input--full" type="password" id="pwd" name="pwd" placeholder="비밀번호를 입력하세요">
-                                </div>
-                                <div class="login-checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember">로그인 정보 저장하기
-                                    </label>
-                                    <label>
-                                        <a href="#">비밀번호 혹은 아이디가 기억안나세요?</a>
-                                    </label>
-                                </div>
-                                <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">로그인</button>
-                            </form>
-                            <div class="register-link">
-                                <p>
-                                   	아직 계정이 없으신가요?
-                                    <a href="signupform.do">블록버스터 가입하기</a>
-                                </p>
-                            </div>
+                            <form action="" method="post">
+
+										<h3> 성공적으로 로그아웃 되었습니다.</h3>
+										<h3> 1초후 메인 페이지로 이동합니다 </h3>
+
+
+										<br /><br />
+                         
                         </div>
                     </div>
                 </div>
@@ -108,6 +89,10 @@
 
     <!-- Main JS-->
     <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
+
+    <script>        
+    setTimeout("location.href='${pageContext.request.contextPath }/'",1500);      
+    </script>
 
 </body>
 

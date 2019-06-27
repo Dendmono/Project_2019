@@ -129,11 +129,11 @@
        								</div>
         						<h4 class="name">${id } </h4>
         						<br /><br />
-       							<a href="#">개인정보 수정</a>
-       							<a href="#">비밀번호 수정</a>
-       							<a href="#">로그아웃</a>
+       							<a href="${pageContext.request.contextPath }/private/infoEdit.do">개인정보 수정</a>
+       							<a href="${pageContext.request.contextPath }/private/passEdit.do">비밀번호 수정</a>
+       							<a href="${pageContext.request.contextPath }/logout.do">로그아웃</a>
        							<br /><br /><br />
-       							<a href="#"><p>회원탈퇴</p></a>			
+       							<a href="${pageContext.request.contextPath }/private/deleteAccount.do"><p>회원탈퇴</p></a>			
    								</div>  
                         </div>
                     </div>

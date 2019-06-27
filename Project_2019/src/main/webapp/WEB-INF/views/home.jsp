@@ -83,7 +83,7 @@
 		  <li><a href="private/info.do" class="btn-services scrollto">고객센터</a></li>
 		  <li><a href="private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
 	</c:otherwise>
-</c:choose>                
+</c:choose>
         </ul>
       </nav><!-- .main-nav -->
       

@@ -88,13 +88,28 @@ public class UsersController {
 		mView.setViewName("login");
 		return mView;
 	}
+		
+	//로그아웃 요청 처리
+	@RequestMapping("/logout")
+	public String logout(HttpSession session){
+		//세션 초기화
+		session.invalidate();
+		return "redirect:/logoutSuccess.do";
+	}
+	
+	// 로그아웃 대기 페이지
+	@RequestMapping("/logoutSuccess")
+	public String logoutSuccess(HttpSession session){
+
+		return "logoutSuccess";
+	}
 	
 	// 개인 정보 페이지
-	@RequestMapping("/private/personal")
+	@RequestMapping("/private/info")
 	public String personal(HttpServletRequest request){
 
 		
-		return "private/personal";
+		return "private/info";
 	}
 	
 }

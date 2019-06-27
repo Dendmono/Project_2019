@@ -15,10 +15,4 @@ public class MainController {
 		return "private/main";
 	}
 	
-	@RequestMapping("/private/info.do")
-	public String info(HttpServletRequest request){	
-
-		return "private/info";
-	}
-	
 }

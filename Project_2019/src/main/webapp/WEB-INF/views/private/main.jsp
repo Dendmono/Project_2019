@@ -17,6 +17,7 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
+
   <!-- Favicons -->
   <link href="${pageContext.request.contextPath }/resources/img/favicon.png" rel="icon">
   <link href="${pageContext.request.contextPath }/resources/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -37,6 +38,19 @@
   <!-- Main Stylesheet File -->
   <link href="${pageContext.request.contextPath }/resources/css/style.css" rel="stylesheet">
   
+  <!--  -->
+  
+  <!-- Vendor CSS-->
+  <link href="${pageContext.request.contextPath }/resources/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/wow/animate.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/slick/slick.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  <link href="${pageContext.request.contextPath }/resources/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+  <!-- Main CSS-->
+  <link href="${pageContext.request.contextPath }/resources/css/theme.css" rel="stylesheet" media="all">
 
  
 
@@ -97,29 +111,155 @@
       
     </div>
   </header><!-- #header -->
-  
-<br /><br /><br /><br /> <br /><br />
+
 	
-<div class="container">
-
-<h1> ICO OPEN 기념 토큰 배분 이벤트 </h1>
-<h2> 1 ETH = 30,000 BLB 교환</h2>
 
 
+<div class="main-content">
+	<div class="section__content section__content--p30">
+    	<div class="container-fluid">
+        	<div class="row">    
+        	
+				<div class="col-md-12">
+                	<div class="overview-item overview-item--c1">
+                    	<div class="overview__inner">
+                        	<div class="overview-box clearfix">
+                            	<div class="text">
+                                	<h2>블록버스터급 보증금 지원 이벤트! 1 ETH = 30,000 BLB토큰 교환!!<br><br></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            	</div>
+            	
+            	<div class="container">
+					<h1> 2호선 역세권 가장 핫한 매물은? </h1>
+					<h2> 지금 아래 버스팅 목록을 확인해보세요!</h2>
+				</div>
+				
+				<br><br><br><br><br>
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+                
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>                
+				
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+                
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+                                				
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>				
+
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>	
+                
+				<div class="col-md-3">
+                	<div class="card">
+                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+			                    <span class="badge badge-success">신청가능</span>
+			                    <span class="badge badge-danger">마감임박</span>
+			                    <span class="badge badge-warning">얼마 남지 않음</span>
+			                    <br /><br />                                       
+                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>	                
+				
+        	</div>
+    	</div>
+	</div>            
 </div>
 
+
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+<br><br><br><br><br> 
   <!--==========================
     Footer
   ============================-->
@@ -153,6 +293,27 @@
   <script src="${pageContext.request.contextPath }/resources/contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
+  <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
+  
+  <!--  -->
+  
+  <!-- Vendor JS       -->
+  <script src="${pageContext.request.contextPath }/resources/vendor/slick/slick.min.js">
+  </script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/wow/wow.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/animsition/animsition.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+  </script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/counter-up/jquery.waypoints.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/counter-up/jquery.counterup.min.js">
+  </script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/circle-progress/circle-progress.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/chartjs/Chart.bundle.min.js"></script>
+  <script src="${pageContext.request.contextPath }/resources/vendor/select2/select2.min.js">
+  </script>
+
+  <!-- Main JS-->
   <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
   
 

@@ -45,8 +45,9 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="#">
+                            <a href="${pageContext.request.contextPath }/">
                                 <img src="${pageContext.request.contextPath }/resources/img/logo.png" alt="blockbuster">
+                                <h3>지금 가입하면 100만원 상당의<br />보증금 BLB토큰 제공!</h3>
                             </a>
                         </div>
                         <div class="login-form">
