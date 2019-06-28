@@ -12,7 +12,7 @@
   </style>
 <head>
   <meta charset="utf-8">
-  <title>blockbuster info</title>
+  <title>blockbuster updateform</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -119,7 +119,7 @@
     <div class="section__content section__content--p30">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="au-card m-b-30">
                         <div class="au-card-inner">
                             <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
@@ -129,26 +129,17 @@
        								</div>
         						<h4 class="name">${id } </h4>
         						<br /><br />
-       							<a href="${pageContext.request.contextPath }/private/updateform.do">개인정보 수정</a>
-       							<a href="${pageContext.request.contextPath }/private/passEdit.do">비밀번호 수정</a>
-       							<a href="${pageContext.request.contextPath }/logout.do">로그아웃</a>
-       							<br /><br /><br />
-       							<a href="${pageContext.request.contextPath }/private/deleteAccount.do"><p>회원탈퇴</p></a>			
-   								</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 BLB토큰</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 보증금 내역</h3>
+								<form action="update.do" method="post" id="updateForm">
+									<input type="hidden" name="id" value="${dto.id }"/>
+									<label for="id">아이디</label>
+									<input type="text" id="id" value="${dto.id }" 
+										disabled="disabled"/><br/>
+									<label for="email">이메일 주소</label>
+									<input type="text" name="email" id="email" 
+										value="${dto.email }"/><br/>
+									<button type="submit">수정 확인</button>
+								</form>
+								혹은 <a href="pwd_updateform.do">비밀번호 수정</a>
                         </div>
                     </div>
                 </div>

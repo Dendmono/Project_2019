@@ -112,6 +112,39 @@ public class UsersController {
 		return "private/info";
 	}
 	
+	// 개인 정보 수정 페이지
+	@RequestMapping("/private/infoEdit")
+	public String infoEdit(HttpServletRequest request){
+
+		
+		return "private/infoEdit";
+	}
+	
+	//개인 정보 보기 요청 처리
+	@RequestMapping("/users/info")
+	public ModelAndView authInfo(HttpServletRequest request,
+			ModelAndView mView){
+		//UsersService 를 이용해서 비즈니스 로직 처리
+		service.showInfo(request.getSession(), mView);
+		
+		//view page 로 forward 이동 
+		mView.setViewName("users/info");
+		return mView;
+	}
+	
+	// 개인정보 수정 페이지
+	@RequestMapping("private/updateform")
+	public ModelAndView authUpdateform(HttpServletRequest request,
+			ModelAndView mView){
+		
+		service.showInfo(request.getSession(), mView);
+		
+		mView.setViewName("private/updateform");
+		return mView;
+	}
+	
+	
+	
 }
 
 
