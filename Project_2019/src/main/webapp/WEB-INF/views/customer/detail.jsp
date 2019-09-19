@@ -12,7 +12,7 @@
   </style>
 <head>
   <meta charset="utf-8">
-  <title>blockbuster info</title>
+  <title>blockbuster customer board</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -116,45 +116,137 @@
 
 <!-- MAIN CONTENT-->
 <div class="main-content">
-    <div class="section__content section__content--p30">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
-                           		<div class="account2">
-        							<div class="image img-cir img-120">
-           								<img src="${pageContext.request.contextPath }/resources/images/icon/avatar-big-01.jpg" alt="John Doe" />
-       								</div>
-        						<h4 class="name">${id } </h4>
-        						<br /><br />
-       							<a href="${pageContext.request.contextPath }/private/updateform.do">개인정보 수정</a>
-       							<a href="${pageContext.request.contextPath }/private/passEdit.do">비밀번호 수정</a>
-       							<a href="${pageContext.request.contextPath }/logout.do">로그아웃</a>
-       							<br /><br /><br />
-       							<a href="${pageContext.request.contextPath }/private/deleteAccount.do"><p>회원탈퇴</p></a>			
-   								</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 BLB토큰</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 보증금 내역</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+<div class="container">
+	<a href="list.do">글 목록보기</a>
+	
+	<c:if test="${not empty keyword }">
+		<p> <strong>${keyword }</strong> 검색어로 검색된
+		결과 자세히 보기 입니다.</p>
+	</c:if>
+	
+	<h3>카페 글 상세 보기</h3>
+	
+	<c:if test="${dto.prevNum ne 0 }">
+		<a href="detail.do?num=${dto.prevNum }&condition=${condition}&keyword=${encodedKeyword}">이전글</a>
+	</c:if>
+	
+	<c:if test="${dto.nextNum ne 0 }">
+		<a href="detail.do?num=${dto.nextNum }&condition=${condition}&keyword=${encodedKeyword}">다음글</a>
+	</c:if>
+	
+	<table class="table table-bordered table-condensed">
+		<tr>
+			<th>글번호</th>
+			<td>${dto.num }</td>
+		</tr>
+		<tr>
+			<th>제목</th>
+			<td>${dto.title }</td>
+		</tr>
+		<tr>
+			<th>작성자</th>
+			<td>${dto.writer }</td>
+		</tr>
+		<tr>
+			<th>조회수</th>
+			<td>${dto.viewCount }</td>
+		</tr>
+		<tr>
+			<th>등록일</th>
+			<td>${dto.regdate }</td>
+		</tr>
+	</table>
+	<div class="content">${dto.content }</div>
+	<%-- 로그인된 아이디와 글 작성자가 같은 경우 수정,삭제 --%>
+	<c:if test="${id eq dto.writer }">
+		<a href="updateform.do?num=${dto.num }">수정</a>
+		<a href="javascript:deleteConfirm()">삭제</a>
+	</c:if>
+	
+	<!-- 댓글 목록 -->
+	<div class="comments">
+		<ul>
+		<c:forEach items="${commentList }" var="tmp">
+			<c:choose>
+				<c:when test="${tmp.deleted ne 'yes' }">
+					<li class="comment" id="comment${tmp.num }" <c:if test="${tmp.num ne tmp.comment_group }">style="padding-left:50px;"</c:if> >
+						<c:if test="${tmp.num ne tmp.comment_group }">
+							<img class="reply_icon" src="${pageContext.request.contextPath}/resources/images/re.gif"/>
+						</c:if>
+						<dl>
+							<dt>
+								<c:choose>
+									<c:when test="${empty tmp.profile }">
+										<img class="user-img" src="${pageContext.request.contextPath}/resources/images/default_user.jpg"/>
+									</c:when>
+									<c:otherwise>
+										<img class="user-img" src="${pageContext.request.contextPath}${tmp.profile}"/>
+									</c:otherwise>
+								</c:choose>
+								
+								<span>${tmp.writer }</span>
+								<c:if test="${tmp.num ne tmp.comment_group }">
+									to <strong>${tmp.target_id }</strong>
+								</c:if>
+								<span>${tmp.regdate }</span>
+								<a href="javascript:" class="reply_link">답글</a> |
+								<c:choose>
+									<%-- 로그인된 아이디와 댓글의 작성자가 같으면 --%>
+									<c:when test="${id eq tmp.writer }">
+										<a href="javascript:" class="comment-update-link">수정</a>&nbsp;&nbsp;
+										<a href="javascript:deleteComment(${tmp.num })">삭제</a>
+									</c:when>
+									<c:otherwise>
+										<a href="javascript:">신고</a>
+									</c:otherwise>
+								</c:choose>
+							</dt>
+							<dd>
+								<pre>${tmp.content }</pre>
+							</dd>
+						</dl>
+						<form class="comment-insert-form" action="comment_insert.do" method="post">
+							<!-- 덧글 그룹 -->
+							<input type="hidden" name="ref_group" value="${dto.num }" />
+							<!-- 덧글 대상 -->
+							<input type="hidden" name="target_id" value="${tmp.writer }" />
+							<input type="hidden" name="comment_group" value="${tmp.comment_group }" />
+							<textarea name="content"><c:if test="${empty id }">로그인이 필요합니다.</c:if></textarea>
+							<button type="submit">등록</button>
+						</form>	
+						<!-- 로그인한 아이디와 댓글의 작성자와 같으면 수정폼 출력 -->				
+						<c:if test="${id eq tmp.writer }">
+							<form class="comment-update-form" action="comment_update.do">
+								<input type="hidden" name="num" value="${tmp.num }" />
+								<textarea name="content">${tmp.content }</textarea>
+								<button type="submit">수정</button>
+							</form>
+						</c:if>
+					</li>				
+				</c:when>
+				<c:otherwise>
+					<li <c:if test="${tmp.num ne tmp.comment_group }">style="padding-left:50px;"</c:if> >삭제된 댓글 입니다.</li>
+				</c:otherwise>
+			</c:choose>
+		</c:forEach>
+		</ul>
+		<div class="clearfix"></div>
+		<!-- 원글에 댓글을 작성할수 있는 폼 -->
+		<div class="comment_form">
+			<form action="comment_insert.do" method="post">
+				<!-- 댓글의 그룹번호는 원글의 글번호 -->
+				<input type="hidden" name="ref_group" value="${dto.num }"/>
+				<!-- 댓글의 대상자는 원글의 작성자 -->
+				<input type="hidden" name="target_id" value="${dto.writer }"/>
+				<textarea name="content"><c:if test="${empty id }">로그인이 필요합니다.</c:if></textarea>
+				<button type="submit">등록</button>
+			</form>
+		</div>
+	</div>
+</div>
+    
+    
 </div>
 <!-- END MAIN CONTENT-->
   

@@ -12,7 +12,7 @@
   </style>
 <head>
   <meta charset="utf-8">
-  <title>blockbuster info</title>
+  <title>blockbuster customer board</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -116,45 +116,100 @@
 
 <!-- MAIN CONTENT-->
 <div class="main-content">
-    <div class="section__content section__content--p30">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
-                           		<div class="account2">
-        							<div class="image img-cir img-120">
-           								<img src="${pageContext.request.contextPath }/resources/images/icon/avatar-big-01.jpg" alt="John Doe" />
-       								</div>
-        						<h4 class="name">${id } </h4>
-        						<br /><br />
-       							<a href="${pageContext.request.contextPath }/private/updateform.do">개인정보 수정</a>
-       							<a href="${pageContext.request.contextPath }/private/passEdit.do">비밀번호 수정</a>
-       							<a href="${pageContext.request.contextPath }/logout.do">로그아웃</a>
-       							<br /><br /><br />
-       							<a href="${pageContext.request.contextPath }/private/deleteAccount.do"><p>회원탈퇴</p></a>			
-   								</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 BLB토큰</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 보증금 내역</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+    <div class="container">
+		<a href="insertform.do">문의 글 작성</a><br /><br />
+		<h3>문의 글 작성</h3><br />
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>작성자</th>
+					<th>제목</th>
+					<th>조회수</th>
+					<th>등록일</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="tmp" items="${list }">
+					<tr>
+						<td>${tmp.num }</td>
+						<td>${tmp.writer }</td>
+						<td><a href="detail.do?num=${tmp.num }&condition=${condition }&keyword=${encodedKeyword }">${tmp.title }</a></td>
+						<td>${tmp.viewCount }</td>
+						<td>${tmp.regdate }</td>
+					</tr>
+				</c:forEach>
+			</tbody>                         
+		</table>         
+		<div class="page-display">
+			<ul class="pagination">
+			<c:choose>
+				<c:when test="${startPageNum ne 1 }">
+					<li>
+						<a href="list.do?pageNum=${startPageNum-1 }&condition=${condition }&keyword=${encodedKeyword }">
+							&laquo;
+						</a>
+					</li>
+				</c:when>
+				<c:otherwise>
+					<li class="disabled">
+						<a href="javascript:">&laquo;</a>
+					</li>
+				</c:otherwise>
+			</c:choose>
+			<c:forEach var="i" begin="${startPageNum }" 
+				end="${endPageNum }" step="1">
+				<c:choose>
+					<c:when test="${i eq pageNum }">
+						<li class="active"><a href="list.do?pageNum=${i }&condition=${condition }&keyword=${encodedKeyword }">${i }</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a href="list.do?pageNum=${i }&condition=${condition }&keyword=${encodedKeyword }">${i }</a></li>
+					</c:otherwise>
+				</c:choose>
+			</c:forEach>
+			
+			<c:choose>
+				<c:when test="${endPageNum lt totalPageCount }">
+					<li>
+						<a href="list.do?pageNum=${endPageNum+1 }&condition=${condition }&keyword=${encodedKeyword }">
+							&raquo;
+						</a>
+					</li>
+				</c:when>
+				<c:otherwise>
+					<li class="disabled">
+						<a href="javascript:">&raquo;</a>
+					</li>
+				</c:otherwise>
+			</c:choose>
+			</ul>		
+		</div>
+		<%-- 글 검색 기능 폼 --%>
+		
+		<form action="list.do" method="get">
+			<label for="condition">검색조건</label>
+			<select name="condition" id="condition">
+				<option value="titlecontent" <c:if test="${condition eq 'titlecontent' }">selected</c:if> >제목+내용</option>
+				<option value="title" <c:if test="${condition eq 'title' }">selected</c:if> >제목</option>
+				<option value="writer" <c:if test="${condition eq 'writer' }">selected</c:if> >작성자</option>
+			</select>
+			<input type="text" name="keyword" 
+				placeholder="검색어 입력..." value="${keyword }"/>
+			<button type="submit">검색</button>
+		</form>
+		
+		<c:if test="${not empty keyword }">
+			<p>
+				<strong>${keyword }</strong> 라는 검색어로 
+				<strong>${totalRow }</strong> 개의 글이 검색 
+				되었습니다.
+			</p>
+		</c:if>
+	</div>
+    
+    
 </div>
 <!-- END MAIN CONTENT-->
   

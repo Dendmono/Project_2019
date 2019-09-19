@@ -99,10 +99,10 @@
           <li><a href="${pageContext.request.contextPath }/loginform.do">로그인</a></li>
 	</c:when>
 	<c:otherwise>      
-	      <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-btn default">전 월세 매물</a></li>
+	      <li><a href="${pageContext.request.contextPath }/private/main.do" class="btn-btn default">전 월세 매물</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">내 보증금</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">토큰 관리</a></li>
-		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">고객센터</a></li>
+		  <li><a href="${pageContext.request.contextPath }/customer/board.do" class="btn-services scrollto">고객센터</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
 	</c:otherwise>
 </c:choose>                
@@ -112,7 +112,6 @@
     </div>
   </header><!-- #header -->
 
-	
 
 
 <div class="main-content">
@@ -264,12 +263,10 @@
     Footer
   ============================-->
   <footer id="footer">
-      <div class="copyright">
-        &copy; Copyright <strong>blockbuster</strong>. All Rights Reserved
-      </div>
       <div class="credits">
-           블록버스터는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다.
-        <br /> 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다.
+        <br /> 블록버스터는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별 판매자가 등록한 거래정보 및 거래에 대하여 책임을 지지 않습니다.
+        <br /> 본 사이트의 콘텐츠는 저작권법의 보호를 받는바, 무단 전재, 복사, 배포 등을 금합니다. <br />
+        &copy; Copyright <strong>blockbuster</strong>. All Rights Reserved
       </div>
   </footer><!-- #footer -->
 

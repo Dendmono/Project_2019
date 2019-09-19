@@ -7,11 +7,17 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<typeAliases>
 		<typeAlias type="com.dend.project.users.dto.UsersDto"
 			alias="usersDto"/>			
+		<typeAlias type="com.dend.project.customer.dto.CustomerDto"
+			alias="customerDto"/>		
+		<typeAlias type="com.dend.project.customer.dto.CustomerCommentDto"
+			alias="customerCommentDto"/>								
 	</typeAliases>	
 
 	<!-- SQL 문을 정의하고 있는 XML 문서 정보 -->
 	<mappers>
 		<mapper resource="com/dend/project/mybatis/UsersMapper.xml"/>
+		<mapper resource="com/dend/project/mybatis/CustomerMapper.xml"/>		
+		<mapper resource="com/dend/project/mybatis/CustomerCommentMapper.xml"/>			
 	</mappers>
 
 </configuration>

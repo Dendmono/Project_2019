@@ -12,7 +12,7 @@
   </style>
 <head>
   <meta charset="utf-8">
-  <title>blockbuster info</title>
+  <title>blockbuster customer board</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -116,45 +116,26 @@
 
 <!-- MAIN CONTENT-->
 <div class="main-content">
-    <div class="section__content section__content--p30">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
-                           		<div class="account2">
-        							<div class="image img-cir img-120">
-           								<img src="${pageContext.request.contextPath }/resources/images/icon/avatar-big-01.jpg" alt="John Doe" />
-       								</div>
-        						<h4 class="name">${id } </h4>
-        						<br /><br />
-       							<a href="${pageContext.request.contextPath }/private/updateform.do">개인정보 수정</a>
-       							<a href="${pageContext.request.contextPath }/private/passEdit.do">비밀번호 수정</a>
-       							<a href="${pageContext.request.contextPath }/logout.do">로그아웃</a>
-       							<br /><br /><br />
-       							<a href="${pageContext.request.contextPath }/private/deleteAccount.do"><p>회원탈퇴</p></a>			
-   								</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 BLB토큰</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="au-card m-b-30">
-                        <div class="au-card-inner">
-                            <h3 class="title-2 m-b-40">${id }님의 보증금 내역</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+<div class="container">
+	<p><strong>${id }</strong> 님 로그인중...</p>
+	<h3>카페 새글 작성 폼 입니다.</h3>
+	<form action="insert.do" method="post">
+		<label for="title">제목</label>
+		<input type="text" name="title" id="title" />
+		<br/>
+		<label for="content">내용</label>
+		<textarea name="content" id="content"></textarea>
+		<div>
+			<input type="button" onclick="pasteHTML();" value="본문에 내용 넣기" />
+			<input type="button" onclick="showHTML();" value="본문 내용 가져오기" />
+			<input type="button" onclick="submitContents(this);" value="서버로 내용 전송" />
+			<input type="button" onclick="setDefaultFont();" value="기본 폰트 지정하기 (궁서_24)" />
+		</div>	
+	</form>
+</div>
+    
+    
 </div>
 <!-- END MAIN CONTENT-->
   
