@@ -1,7 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%--
+	[ SmartEditor 를 사용하기 위한 설정 ]
+	
+	1. WebContent 에 SmartEditor 폴더를 복사해서 붙여넣기
+	2. WebContent 에 upload 폴더 만들어 두기 
+	3. WebContent/WEB-INF/lib 에 
+	   commons-io.jar , commons-fileupload.jar 파일 붙여넣기
+	4. 아래의 html 과 javascript 작성 
+ --%>
 <!DOCTYPE html>
 <html lang="ko">
 <link rel="stylesheet" href="${pageContext.request.contextPath }/resources/css/bootstrap.css" />
@@ -10,6 +18,12 @@
 	      background: url(${pageContext.request.contextPath }/resources/img/block.png) no-repeat center center fixed;
 	      background-size: cover;
       }
+	/* textarea 의 크기가 SmartEditor 의 크기가 된다. */
+	#content{
+		display: none;
+		width: 100%;
+		height: 400px;
+	}      
   </style>
 <head>
   <meta charset="utf-8">
@@ -118,96 +132,27 @@
 <!-- MAIN CONTENT-->
 <div class="main-content">
     
-    <div class="container">
-		<a href="insertform.do">문의 글 작성</a><br /><br />
-		<h3>문의 글 작성</h3><br />
-		<table class="table table-bordered">
-			<thead>
-				<tr>
-					<th>번호</th>
-					<th>작성자</th>
-					<th>제목</th>
-					<th>조회수</th>
-					<th>등록일</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="tmp" items="${list }">
-					<tr>
-						<td>${tmp.num }</td>
-						<td>${tmp.writer }</td>
-						<td><a href="detail.do?num=${tmp.num }&condition=${condition }&keyword=${encodedKeyword }">${tmp.title }</a></td>
-						<td>${tmp.viewCount }</td>
-						<td>${tmp.regdate }</td>
-					</tr>
-				</c:forEach>
-			</tbody>                         
-		</table>         
-		<div class="page-display">
-			<ul class="pagination">
-			<c:choose>
-				<c:when test="${startPageNum ne 1 }">
-					<li>
-						<a href="list.do?pageNum=${startPageNum-1 }&condition=${condition }&keyword=${encodedKeyword }">
-							&laquo;
-						</a>
-					</li>
-				</c:when>
-				<c:otherwise>
-					<li class="disabled">
-						<a href="javascript:">&laquo;</a>
-					</li>
-				</c:otherwise>
-			</c:choose>
-			<c:forEach var="i" begin="${startPageNum }" 
-				end="${endPageNum }" step="1">
-				<c:choose>
-					<c:when test="${i eq pageNum }">
-						<li class="active"><a href="list.do?pageNum=${i }&condition=${condition }&keyword=${encodedKeyword }">${i }</a></li>
-					</c:when>
-					<c:otherwise>
-						<li><a href="list.do?pageNum=${i }&condition=${condition }&keyword=${encodedKeyword }">${i }</a></li>
-					</c:otherwise>
-				</c:choose>
-			</c:forEach>
-			
-			<c:choose>
-				<c:when test="${endPageNum lt totalPageCount }">
-					<li>
-						<a href="list.do?pageNum=${endPageNum+1 }&condition=${condition }&keyword=${encodedKeyword }">
-							&raquo;
-						</a>
-					</li>
-				</c:when>
-				<c:otherwise>
-					<li class="disabled">
-						<a href="javascript:">&raquo;</a>
-					</li>
-				</c:otherwise>
-			</c:choose>
-			</ul>		
-		</div>
-		<%-- 글 검색 기능 폼 --%>
-		
-		<form action="list.do" method="get">
-			<label for="condition">검색조건</label>
-			<select name="condition" id="condition">
-				<option value="titlecontent" <c:if test="${condition eq 'titlecontent' }">selected</c:if> >제목+내용</option>
-				<option value="title" <c:if test="${condition eq 'title' }">selected</c:if> >제목</option>
-				<option value="writer" <c:if test="${condition eq 'writer' }">selected</c:if> >작성자</option>
-			</select>
-			<input type="text" name="keyword" 
-				placeholder="검색어 입력..." value="${keyword }"/>
-			<button type="submit">검색</button>
+	<div class="container">
+		<p><strong>${id }</strong> 님 로그인중...</p>
+		<h3>카페 글 수정 폼 입니다.</h3>
+		<form action="update.do" method="post">
+			<%-- 폼 제출할때 글번호도 전송되게 하기 위해 --%>
+			<input type="hidden" name="num" value="${dto.num }" />
+			<label for="num">글번호</label>
+			<input type="text" id="num" value="${dto.num }"  disabled="disabled"/>
+			<br/>
+			<label for="title">제목</label>
+			<input type="text" name="title" id="title" value="${dto.title }" />
+			<br/>
+			<label for="content">내용</label>
+			<textarea name="content" id="content">${dto.content }</textarea>
+			<div>
+				<input type="button" onclick="pasteHTML();" value="본문에 내용 넣기" />
+				<input type="button" onclick="showHTML();" value="본문 내용 가져오기" />
+				<input type="button" onclick="submitContents(this);" value="서버로 내용 전송" />
+				<input type="button" onclick="setDefaultFont();" value="기본 폰트 지정하기 (궁서_24)" />
+			</div>	
 		</form>
-		
-		<c:if test="${not empty keyword }">
-			<p>
-				<strong>${keyword }</strong> 라는 검색어로 
-				<strong>${totalRow }</strong> 개의 글이 검색 
-				되었습니다.
-			</p>
-		</c:if>
 	</div>
     
     
@@ -279,8 +224,81 @@
   <!-- Main JS-->
   <script src="${pageContext.request.contextPath }/resources/js/main.js"></script>
   
+  
+<!-- SmartEditor 에서 필요한 javascript 로딩  -->
+<script src="${pageContext.request.contextPath }/SmartEditor/js/HuskyEZCreator.js"></script>
+<script>
+	var oEditors = [];
+	
+	//추가 글꼴 목록
+	//var aAdditionalFontSet = [["MS UI Gothic", "MS UI Gothic"], ["Comic Sans MS", "Comic Sans MS"],["TEST","TEST"]];
+	
+	nhn.husky.EZCreator.createInIFrame({
+		oAppRef: oEditors,
+		elPlaceHolder: "content",
+		sSkinURI: "${pageContext.request.contextPath}/SmartEditor/SmartEditor2Skin.html",	
+		htParams : {
+			bUseToolbar : true,				// 툴바 사용 여부 (true:사용/ false:사용하지 않음)
+			bUseVerticalResizer : true,		// 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
+			bUseModeChanger : true,			// 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음)
+			//aAdditionalFontList : aAdditionalFontSet,		// 추가 글꼴 목록
+			fOnBeforeUnload : function(){
+				//alert("완료!");
+			}
+		}, //boolean
+		fOnAppLoad : function(){
+			//예제 코드
+			//oEditors.getById["ir1"].exec("PASTE_HTML", ["로딩이 완료된 후에 본문에 삽입되는 text입니다."]);
+		},
+		fCreator: "createSEditor2"
+	});
+	
+	function pasteHTML() {
+		var sHTML = "<span style='color:#FF0000;'>이미지도 같은 방식으로 삽입합니다.<\/span>";
+		oEditors.getById["content"].exec("PASTE_HTML", [sHTML]);
+	}
+	
+	function showHTML() {
+		var sHTML = oEditors.getById["content"].getIR();
+		alert(sHTML);
+	}
+		
+	function submitContents(elClickedObj) {
+		oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
+		
+		// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("ir1").value를 이용해서 처리하면 됩니다.
+		
+		try {
+			elClickedObj.form.submit();
+		} catch(e) {}
+	}
+	
+	function setDefaultFont() {
+		var sDefaultFont = '궁서';
+		var nFontSize = 24;
+		oEditors.getById["content"].setDefaultFont(sDefaultFont, nFontSize);
+	}
+</script>
+
+
+
+
+
+
+
+
+
 
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
