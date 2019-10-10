@@ -143,6 +143,21 @@ public class UsersController {
 		return mView;
 	}
 	
+	// 토큰 관리 페이지
+	@RequestMapping("/private/topup")
+	public String authTopup(HttpServletRequest request){
+		
+		return "private/topup";
+	}
+	
+	// 보증금 환전 페이지
+	@RequestMapping("/private/refund")
+	public String authRefund(HttpServletRequest request){
+		
+		return "private/refund";
+	}
+	
+	
 	
 	
 }

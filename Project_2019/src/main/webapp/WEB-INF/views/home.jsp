@@ -77,7 +77,7 @@
           <li><a href="${pageContext.request.contextPath }/loginform.do">로그인</a></li>
 	</c:when>
 	<c:otherwise>
-	      <li><a href="private/info.do" class="btn-btn default">전 월세 매물</a></li>
+	      <li><a href="private/main.do" class="btn-btn default">전 월세 매물</a></li>
 		  <li><a href="private/info.do" class="btn-services scrollto">내 보증금</a></li>
 		  <li><a href="private/info.do" class="btn-services scrollto">토큰 관리</a></li>
 		  <li><a href="customer/board.do" class="btn-services scrollto">고객센터</a></li>

@@ -97,10 +97,10 @@
           <li><a href="${pageContext.request.contextPath }/loginform.do">로그인</a></li>
 	</c:when>
 	<c:otherwise>      
-	      <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-btn default">전 월세 매물</a></li>
+	      <li><a href="${pageContext.request.contextPath }/private/main.do" class="btn-btn default">전 월세 매물</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">내 보증금</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">토큰 관리</a></li>
-		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">고객센터</a></li>
+		  <li><a href="${pageContext.request.contextPath }/customer/board.do" class="btn-services scrollto">고객센터</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
 	</c:otherwise>
 </c:choose>                

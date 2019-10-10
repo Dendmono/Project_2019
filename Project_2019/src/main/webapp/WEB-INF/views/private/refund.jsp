@@ -12,7 +12,7 @@
   </style>
 <head>
   <meta charset="utf-8">
-  <title>blockbuster info</title>
+  <title>blockbuster refund</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -121,47 +121,18 @@
 	        <div class="container-fluid">
 	            <div class="row">
 	
-	                <div class="col-lg-4">
+	                
+	                <div class="col-lg-12">
 	                    <div class="au-card m-b-30">
 	                        <div class="au-card-inner">
-	                            <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
-	                           		<div class="account2">
-	        							<div class="image img-cir img-120">
-	           								<img src="${pageContext.request.contextPath }/resources/images/icon/avatar-big-01.jpg" alt="John Doe" />
-	       								</div>
-	        						<h4 class="name">${id } </h4>
-	        						<br /><br />
-	       							<a href="${pageContext.request.contextPath }/private/updateform.do">개인정보 수정</a>
-	       							<a href="${pageContext.request.contextPath }/private/passEdit.do">비밀번호 수정</a>
-	       							<a href="${pageContext.request.contextPath }/logout.do">로그아웃</a>
-	       							<br /><br /><br />
-	       							<a href="${pageContext.request.contextPath }/private/deleteAccount.do">회원탈퇴</a>			
-	   								</div>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="col-lg-4">
-	                    <div class="au-card m-b-30">
-	                        <div class="au-card-inner">
-	                            <h3 class="title-2 m-b-40">${id }님의 BLB토큰</h3>
-	                            <h2>333,514 BLB
-                                	<button type="button" class="btn btn-success btn-sm" onclick="location.href='${pageContext.request.contextPath }/private/topup.do'">충전하기</button>
-                                	<button type="button" class="btn btn-outline-primary btn-sm">토큰 관리</button>                                        	
+	                            <h3 class="title-2 m-b-40">${id }님의 보증금</h3>
+	                            <h2>60,000,000 원
+                                	<button type="button" class="btn btn-success btn-sm" onclick="location.href='${pageContext.request.contextPath }/private/refund.do'">출금요청</button>                                     	
                                 </h2>
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-lg-4">
-	                    <div class="au-card m-b-30">
-	                        <div class="au-card-inner">
-	                            <h3 class="title-2 m-b-40">${id }님의 보증금 내역</h3>
-                                <h2>60,000,000 원
-                                	<button type="button" class="btn btn-success btn-sm" onclick="location.href='${pageContext.request.contextPath }/private/refund.do'">출금요청</button>
-                                	<button type="button" class="btn btn-outline-primary btn-sm">거래내역</button>
-                                </h2>	                            
-	                        </div>
-	                    </div>
-	                </div>
+	                
 	            </div>
 	        </div>
 	    </div>

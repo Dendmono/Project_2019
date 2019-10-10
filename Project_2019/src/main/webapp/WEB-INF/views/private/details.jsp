@@ -12,10 +12,11 @@
   </style>
 <head>
   <meta charset="utf-8">
-  <title>blockbuster info</title>
+  <title>blockbuster details</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+
 
   <!-- Favicons -->
   <link href="${pageContext.request.contextPath }/resources/img/favicon.png" rel="icon">
@@ -39,7 +40,6 @@
   
   <!--  -->
   
-  
   <!-- Vendor CSS-->
   <link href="${pageContext.request.contextPath }/resources/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
   <link href="${pageContext.request.contextPath }/resources/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
@@ -51,6 +51,8 @@
 
   <!-- Main CSS-->
   <link href="${pageContext.request.contextPath }/resources/css/theme.css" rel="stylesheet" media="all">
+
+ 
 
 </head>
 
@@ -109,77 +111,60 @@
       
     </div>
   </header><!-- #header -->
-  
-<br />
-	
 
 
-<!-- MAIN CONTENT-->
+
 <div class="main-content">
 	<div class="container">
-	    <div class="section__content section__content--p30">
-	        <div class="container-fluid">
-	            <div class="row">
-	
-	                <div class="col-lg-4">
-	                    <div class="au-card m-b-30">
-	                        <div class="au-card-inner">
-	                            <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
-	                           		<div class="account2">
-	        							<div class="image img-cir img-120">
-	           								<img src="${pageContext.request.contextPath }/resources/images/icon/avatar-big-01.jpg" alt="John Doe" />
-	       								</div>
-	        						<h4 class="name">${id } </h4>
-	        						<br /><br />
-	       							<a href="${pageContext.request.contextPath }/private/updateform.do">개인정보 수정</a>
-	       							<a href="${pageContext.request.contextPath }/private/passEdit.do">비밀번호 수정</a>
-	       							<a href="${pageContext.request.contextPath }/logout.do">로그아웃</a>
-	       							<br /><br /><br />
-	       							<a href="${pageContext.request.contextPath }/private/deleteAccount.do">회원탈퇴</a>			
-	   								</div>
+		<div class="section__content section__content--p30">
+	    	<div class="container-fluid">
+	        	<div class="row">    
+	        	
+					
+	            	
+	            	<div class="container">
+						<h1> 마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !! </h1>
+					</div>
+					
+					<br><br><br>
+					
+					<div class="col-md-6">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3"> 2호선 역세권 도보 5분 거리에 위치 </h4>
+	                        	<h4> 합정역에서 2호선 초역세권이고 굉장히 넓은 투룸입니다 관리비는 월 8만원에 모든 옵션 빌트인이고 신축이라서 매우 쾌적한 환경입니다. 층간소음이나 옆집과의 소음도 굉장히 적은 편입니다.  </h4>
+				                    <br /><br />     
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-lg-4">
-	                    <div class="au-card m-b-30">
-	                        <div class="au-card-inner">
-	                            <h3 class="title-2 m-b-40">${id }님의 BLB토큰</h3>
-	                            <h2>333,514 BLB
-                                	<button type="button" class="btn btn-success btn-sm" onclick="location.href='${pageContext.request.contextPath }/private/topup.do'">충전하기</button>
-                                	<button type="button" class="btn btn-outline-primary btn-sm">토큰 관리</button>                                        	
-                                </h2>
+	                
+					<div class="col-md-6">
+	                	<div class="card">
+	                    	<div class="card-body">
+	                        	<h2 class="card-title mb-3">이 매물은 지금 연락가능합니다</h2><br />
+	                        	<h2>세입자에게도  BLB 토큰 5%  배당</h2>
+				                    <br /><br />       
+				                <button type="button" class="btn btn-success btn-lg btn-block" onclick="location.href='${pageContext.request.contextPath }/private/details.do'">지금 연락하기</button>                                    
+	                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='${pageContext.request.contextPath }/private/details.do'">찜 해두기</button>
+	                        	<br /><br />
+	                        	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/maps.png" alt="mpas">
 	                        </div>
 	                    </div>
 	                </div>
-	                <div class="col-lg-4">
-	                    <div class="au-card m-b-30">
-	                        <div class="au-card-inner">
-	                            <h3 class="title-2 m-b-40">${id }님의 보증금 내역</h3>
-                                <h2>60,000,000 원
-                                	<button type="button" class="btn btn-success btn-sm" onclick="location.href='${pageContext.request.contextPath }/private/refund.do'">출금요청</button>
-                                	<button type="button" class="btn btn-outline-primary btn-sm">거래내역</button>
-                                </h2>	                            
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</div>    
+	                    
+					
+	        	</div>
+	    	</div>
+		</div>            
+	</div>	
 </div>
-<!-- END MAIN CONTENT-->
+
+
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+<br><br><br><br><br> 
   <!--==========================
     Footer
   ============================-->

@@ -156,7 +156,7 @@
 	      <li><a href="${pageContext.request.contextPath }/private/main.do" class="btn-btn default">전 월세 매물</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">내 보증금</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">토큰 관리</a></li>
-		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">고객센터</a></li>
+		  <li><a href="${pageContext.request.contextPath }/customer/board.do" class="btn-services scrollto">고객센터</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
 	</c:otherwise>
 </c:choose>                
@@ -174,14 +174,14 @@
 <div class="main-content">
     
 <div class="container">
-	<a href="list.do">글 목록보기</a>
+	<a href="board.do">글 목록보기</a>
 	
 	<c:if test="${not empty keyword }">
 		<p> <strong>${keyword }</strong> 검색어로 검색된
 		결과 자세히 보기 입니다.</p>
 	</c:if>
 	
-	<h3>카페 글 상세 보기</h3>
+	<h3> 문의 내용  </h3>
 	
 	<c:if test="${dto.prevNum ne 0 }">
 		<a href="detail.do?num=${dto.prevNum }&condition=${condition}&keyword=${encodedKeyword}">이전글</a>

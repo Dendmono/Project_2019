@@ -115,143 +115,145 @@
 
 
 <div class="main-content">
-	<div class="section__content section__content--p30">
-    	<div class="container-fluid">
-        	<div class="row">    
-        	
-				<div class="col-md-12">
-                	<div class="overview-item overview-item--c1">
-                    	<div class="overview__inner">
-                        	<div class="overview-box clearfix">
-                            	<div class="text">
-                                	<h2>블록버스터급 보증금 지원 이벤트! 1 ETH = 30,000 BLB토큰 교환!!<br><br></h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            	</div>
-            	
-            	<div class="container">
-					<h1> 2호선 역세권 가장 핫한 매물은? </h1>
-					<h2> 지금 아래 버스팅 목록을 확인해보세요!</h2>
-				</div>
-				
-				<br><br><br><br><br>
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>
-                
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>                
-				
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>
-
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>
-                
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>
-                                				
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>				
-
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>	
-                
-				<div class="col-md-3">
-                	<div class="card">
-                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
-			                    <span class="badge badge-success">신청가능</span>
-			                    <span class="badge badge-danger">마감임박</span>
-			                    <span class="badge badge-warning">얼마 남지 않음</span>
-			                    <br /><br />                                       
-                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
-                        </div>
-                    </div>
-                </div>	                
-				
-        	</div>
-    	</div>
-	</div>            
+	<div class="container">
+		<div class="section__content section__content--p30">
+	    	<div class="container-fluid">
+	        	<div class="row">    
+	        	
+					<div class="col-md-12">
+	                	<div class="overview-item overview-item--c1">
+	                    	<div class="overview__inner">
+	                        	<div class="overview-box clearfix">
+	                            	<div class="text">
+	                                	<h2>블록버스터급 보증금 지원 이벤트! 1 ETH = 30,000 BLB토큰 교환!!<br><br></h2>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	            	</div>
+	            	
+	            	<div class="container">
+						<h1> 2호선 역세권 가장 핫한 매물은? </h1>
+						<h2> 지금 아래 버스팅 목록을 확인해보세요!</h2>
+					</div>
+					
+					<br><br><br><br><br>
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='${pageContext.request.contextPath }/private/details.do'">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>                
+					
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>
+	
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>
+	                
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>
+	                                				
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>				
+	
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>	
+	                
+					<div class="col-md-3">
+	                	<div class="card">
+	                    	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/room.jpg" alt="Card image cap">
+	                        <div class="card-body">
+	                        	<h4 class="card-title mb-3">마포구 합정동 2호선 역세권 넓은 투룸 1000/40 !!</h4>
+				                    <span class="badge badge-success">신청가능</span>
+				                    <span class="badge badge-danger">마감임박</span>
+				                    <span class="badge badge-warning">얼마 남지 않음</span>
+				                    <br /><br />                                       
+	                            <button type="button" class="btn btn-primary btn-lg btn-block">자세히 보기</button>
+	                        </div>
+	                    </div>
+	                </div>	                
+					
+	        	</div>
+	    	</div>
+		</div>            
+	</div>	
 </div>
 
 

@@ -101,7 +101,7 @@
 	      <li><a href="${pageContext.request.contextPath }/private/main.do" class="btn-btn default">전 월세 매물</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">내 보증금</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">토큰 관리</a></li>
-		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">고객센터</a></li>
+		  <li><a href="${pageContext.request.contextPath }/customer/board.do" class="btn-services scrollto">고객센터</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
 	</c:otherwise>
 </c:choose>                
@@ -118,9 +118,11 @@
 <!-- MAIN CONTENT-->
 <div class="main-content">
     
-    <div class="container">
-		<a href="insertform.do">문의 글 작성</a><br /><br />
-		<h3>문의 글 작성</h3><br />
+    <div class="container">		
+		<h3> 고객센터 </h3><br />
+		<h3> 문의 하실 내용을 작성하시면 빠르게 답변해드리겠습니다 </h3><br />
+		
+		<a href="insertform.do">문의 글 작성</a>
 		<table class="table table-bordered">
 			<thead>
 				<tr>

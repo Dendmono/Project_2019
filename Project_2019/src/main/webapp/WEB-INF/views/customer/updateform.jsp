@@ -115,7 +115,7 @@
 	      <li><a href="${pageContext.request.contextPath }/private/main.do" class="btn-btn default">전 월세 매물</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">내 보증금</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">토큰 관리</a></li>
-		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">고객센터</a></li>
+		  <li><a href="${pageContext.request.contextPath }/customer/board.do" class="btn-services scrollto">고객센터</a></li>
 		  <li><a href="${pageContext.request.contextPath }/private/info.do" class="btn-services scrollto">${id }님 로그인 중</a></li>
 	</c:otherwise>
 </c:choose>                
@@ -134,7 +134,7 @@
     
 	<div class="container">
 		<p><strong>${id }</strong> 님 로그인중...</p>
-		<h3>카페 글 수정 폼 입니다.</h3>
+		<h3>수정이 완료되면 확인 버튼을 눌러주세요</h3><br />
 		<form action="update.do" method="post">
 			<%-- 폼 제출할때 글번호도 전송되게 하기 위해 --%>
 			<input type="hidden" name="num" value="${dto.num }" />

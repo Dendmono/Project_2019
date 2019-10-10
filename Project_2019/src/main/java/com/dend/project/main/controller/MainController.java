@@ -15,4 +15,11 @@ public class MainController {
 		return "private/main";
 	}
 	
+	// 목록 디테일 페이지
+	@RequestMapping("/private/details.do")
+	public String details(HttpServletRequest request){
+		
+		return "private/details";
+	}
+	
 }
