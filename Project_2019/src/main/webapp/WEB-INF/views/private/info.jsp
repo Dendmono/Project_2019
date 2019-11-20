@@ -127,7 +127,7 @@
 	                            <h3 class="title-2 m-b-40">${id } 님의 정보 입니다</h3>
 	                           		<div class="account2">
 	        							<div class="image img-cir img-120">
-	           								<img src="${pageContext.request.contextPath }/resources/images/icon/avatar-big-01.jpg" alt="John Doe" />
+	           								<img src="${pageContext.request.contextPath }/resources/images/icon/profile1.jpg" alt="pic" />
 	       								</div>
 	        						<h4 class="name">${id } </h4>
 	        						<br /><br />

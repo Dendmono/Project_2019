@@ -85,14 +85,11 @@
 	</c:otherwise>
 </c:choose>
         </ul>
-      </nav><!-- .main-nav -->
+      </nav>
       
     </div>
-  </header><!-- #header -->
+  </header>
 
-  <!--==========================
-    Intro Section
-  ============================-->
   <section id="intro" class="clearfix">
     <div class="container">
 
@@ -129,8 +126,8 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h3>안전하게 보증금을 돌려받고 집주인은 투자 수익까지</h3>
+          <p>블록버스터로 원하는 매물을 찾고 보증금은 안전하게 돌려받고! 집주인은 보증금을 이용해 투자수익 까지 얻으세요.</p>
         </header>
 
         <div class="row about-container">

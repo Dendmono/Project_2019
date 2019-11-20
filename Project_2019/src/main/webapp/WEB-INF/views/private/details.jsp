@@ -135,6 +135,7 @@
 	                        	<h4 class="card-title mb-3"> 2호선 역세권 도보 5분 거리에 위치 </h4>
 	                        	<h4> 합정역에서 2호선 초역세권이고 굉장히 넓은 투룸입니다 관리비는 월 8만원에 모든 옵션 빌트인이고 신축이라서 매우 쾌적한 환경입니다. 층간소음이나 옆집과의 소음도 굉장히 적은 편입니다.  </h4>
 				                    <br /><br />     
+				                
 	                        </div>
 	                    </div>
 	                </div>
@@ -146,7 +147,7 @@
 	                        	<h2>세입자에게도  BLB 토큰 5%  배당</h2>
 				                    <br /><br />       
 				                <button type="button" class="btn btn-success btn-lg btn-block" onclick="location.href='${pageContext.request.contextPath }/private/details.do'">지금 연락하기</button>                                    
-	                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='${pageContext.request.contextPath }/private/details.do'">찜 해두기</button>
+	                            <button type="button" class="btn btn-outline-danger btn-lg btn-block" onclick="location.href='${pageContext.request.contextPath }/private/details.do'"><i class="fa fa-star"></i> 찜 해두기</button>
 	                        	<br /><br />
 	                        	<img class="card-img-top" src="${pageContext.request.contextPath }/resources/images/maps.png" alt="mpas">
 	                        </div>

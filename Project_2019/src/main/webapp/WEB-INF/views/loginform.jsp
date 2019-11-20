@@ -66,7 +66,7 @@
                                         <input type="checkbox" name="remember">로그인 정보 저장하기
                                     </label>
                                     <label>
-                                        <a href="#">비밀번호 혹은 아이디가 기억안나세요?</a>
+                                        <a href="#" style="color:green">비밀번호 혹은 아이디가 기억안나세요?</a>
                                     </label>
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">로그인</button>
@@ -74,7 +74,7 @@
                             <div class="register-link">
                                 <p>
                                    	아직 계정이 없으신가요?
-                                    <a href="signupform.do">블록버스터 가입하기</a>
+                                    <a href="signupform.do" style="color:green">블록버스터 가입하기</a>
                                 </p>
                             </div>
                         </div>

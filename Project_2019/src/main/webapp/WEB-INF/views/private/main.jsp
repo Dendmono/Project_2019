@@ -125,7 +125,7 @@
 	                    	<div class="overview__inner">
 	                        	<div class="overview-box clearfix">
 	                            	<div class="text">
-	                                	<h2>블록버스터급 보증금 지원 이벤트! 1 ETH = 30,000 BLB토큰 교환!!<br><br></h2>
+	                                	<h2 style="font-weight:bold">블록버스터급 보증금 지원 이벤트! 1 ETH = 30,000 BLB토큰 교환!<br><br></h2>
 	                                </div>
 	                            </div>
 	                        </div>
